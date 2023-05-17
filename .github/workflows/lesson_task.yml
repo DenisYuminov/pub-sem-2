@@ -1,0 +1,17 @@
+name: lesson_task
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      - run: pip install Flask pytest flask_sqlalchemy
+      - run: python p22/tests/test_crud.py
