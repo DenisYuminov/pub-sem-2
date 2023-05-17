@@ -13,8 +13,8 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.8'
-      - run: pip install Flask pytest flask_sqlalchemy
+      - run: pip3 install Flask pytest flask_sqlalchemy
       - name: Run tests
-        run: python p22/tests/test_crud.py
+        run: python3 p22/tests/test_crud.py
         if: ${{ failure() }}
 
