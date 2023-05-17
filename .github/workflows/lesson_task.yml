@@ -23,5 +23,5 @@ jobs:
         run:  pip install Flask pytest flask_sqlalchemy
 
       - name: Run pytest
-        run: python p22/tests/test_crud.py
+        run: python p22/tests
 
